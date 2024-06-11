@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Erick Tapias</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" >INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Hero4.png" alt="">
+            </div>
+            <h1>Erick Tapias</h1>
+            <h2>Developer</h2>
+            <div class="redes">
+                <a href="https://www.instagram.com/tapiaserick/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/erick-tapias/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ErickTapias"><i class="fa-brands fa-git"></i></a>
+                <a href="https://join.skype.com/invite/u1eThuQhnhcO"><i class="fa-brands fa-skype"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Erick Tapias.</span> Desarrollador apasionado con un año de 
+                experiencia en proyectos varios como freelancer, experto en crear experiencias 
+                digitales cautivadoras. Combino +10 años de diseño gráfico con habilidades técnicas 
+                en lenguajes como HTML5, CSS3, JavaScript y JAVA. Mi enfoque meticuloso y mi 
+                excelente comunicación garantizan productos digitales de alta calidad que atraen e 
+                involucran a los usuarios.
+                Desarrollo software práctico, atractivo y receptivo. Tengo experiencia en la creación 
+                de aplicaciones innovadoras para las industrias del deporte, el marketing y la publicidad. 
+                Un ejemplo destacado es una aplicación que automatizó tareas para la atención al 
+                cliente en empresas de productos varios y víveres, lo que resultó en un aumento del 
+                30% en las ventas y la interacción en redes sociales. Además, soy un experto en la 
+                resolución de problemas complejos y en la búsqueda de soluciones creativas que 
+                satisfagan las necesidades del cliente.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Teléfono</strong>
+                            <a href="https://w.app/FtH">+58 424 7682337<i class="fa-brands"></i></a>
+                          
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <a href="mailto://ericktapias@gmail.com">ericktapias@gmail.com<i class="fa-brands"></i></a>
+                            
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            www.etportafolio.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Venezuela
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-windows"></i>
+                            <span>WIN</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button >
+                <a href="https://drive.google.com/file/d/1h6ha4xXDZIGbDWgkfDPv2E1atKvltsCD/view?usp=drive_link">Descargar CV<i class="fa-solid fa-download"></i></a>
+                                  <span class="overlay" ></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>JAVA</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Illustrator / Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>78%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Harvard University</h4>
+                        <span class="casa">CS50's Introduction to Computer Science</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>-Una comprensión amplia y sólida de la informática y la programación.
+                            -Cómo pensar algorítmicamente y resolver problemas de programación de manera eficiente.
+                            -Conceptos como abstracción, algoritmos, estructuras de datos, encapsulación, gestión de
+                            recursos, seguridad, ingeniería de software y desarrollo web.
+                            -Familiaridad con varios lenguajes, incluidos C, Python, SQL y JavaScript, además de CSS y
+                            HTML.
+                            -Cómo desarrollar y presentar un proyecto final de programación.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Developer Front-end</h4>
+                        <span class="casa">Fundación Carlos Slim</span>
+                        <span class="fecha">2023 - 2023</span>
+                        <p>El Developer Front-end utiliza las tecnologías de la información y comunicación para
+                            plasmar el contenido de manera que los usuarios lo puedan aprovechar al máximo. Puede
+                            convertir cualquier sitio web en un fenómeno mundial. Técnologias aprendidas HTML, CSS3,
+                            JavaScript, React, Node JS, VUE JS.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Diseño Gráfico</h4>
+                        <span class="casa">Universidad de Los Andes</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Estudios avanzados de Diseñador Gráfico durante 3 años</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">Icoo Studio & Art</span>
+                        <span class="fecha">2023</span>
+                        <p>Creamos experiencias digitales atractivas y fáciles de usar que impulsan el crecimiento empresarial. Diseño web personalizado, sitios web y aplicaciones.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">FREELANCE</span>
+                        <span class="fecha">2023</span>
+                        <p>Desarrollador web y de aplicaciones con experiencia en HTML, CSS y JavaScript. 
+                            Especializado en diseño responsivo y en el desarrollo de sitios web optimizados. 
+                            Desarrollo de Software en JAVA y sus framework mas populares.
+                            Demostrada capacidad para entregar proyectos de alta calidad.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>www.ciencia+futbol.com</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>www.icoostudioart.com</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Web Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.jpg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Venezuel 5101, Mérida
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: +58-4247682337
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: ericktapias@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.instagram.com/tapiaserick/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/erick-tapias/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/ErickTapias"><i class="fa-brands fa-git"></i></a>
+            <a href="https://join.skype.com/invite/u1eThuQhnhcO"><i class="fa-brands fa-skype"></i></a>
+        </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
