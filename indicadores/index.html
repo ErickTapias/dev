@@ -657,125 +657,94 @@
     });
   </script>
 
-  <style>
+<!-- Añade este CSS al final del bloque <style> -->
+<style>
   /* --- AJUSTES MÓVIL: Menú y Modal --- */
 
-      <script>
-  // Menú hamburguesa
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Cerrar menú al hacer click en un enlace
-  document.querySelectorAll('#navLinks a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.style.display = 'none';
-      menuToggle.classList.remove('open');
-    });
-  });
-</script>
-
-
-<style>
-  /* --- MEJORA TOTAL DEL MENÚ EN MÓVILES: Encabezado arriba, botones abajo con animación --- */
+  /* Asegurar que el viewport sea correcto (ya lo tienes, pero lo refuerzo) */
   @media (max-width: 768px) {
-    /* Cambiar a diseño vertical */
+    /* Navbar: mantener el menú legible y no cortado */
     .nav-inner {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-      padding: 14px 16px;
-      text-align: center;
-    }
-
-    /* Encabezado arriba (logo y nombre) */
-    .brand {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 8px;
-      font-size: 1.3rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      animation: fadeInUp 0.6s ease-out;
-    }
-    .brand .dot {
-      width: 12px;
-      height: 12px;
-      background: var(--primary);
-      box-shadow: 0 0 16px var(--primary);
-      margin-right: 8px;
-    }
-
-    /* Botonera abajo */
-    .links {
-      display: flex;
+      padding: 12px 12px;
       flex-wrap: wrap;
+      gap: 8px;
+    }
+    .links {
+      width: 100%;
       justify-content: center;
-      gap: 10px;
-      padding: 10px 0;
-      border-top: 1px solid var(--stroke);
-      animation: fadeInUp 0.6s ease-out 0.2s both;
     }
-
     .links a {
-      font-size: 0.85rem;
-      padding: 6px 10px;
-      border-radius: 8px;
-      opacity: 0.9;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .links a:hover {
-      opacity: 1;
-      background: rgba(0, 255, 153, 0.15);
-      transform: translateY(-1px);
-    }
-
-    .links a.btn {
-      background: var(--primary);
-      color: #0f2027;
-      font-weight: 700;
-      padding: 8px 16px;
       font-size: 0.9rem;
-      box-shadow: 0 4px 12px rgba(0, 255, 153, 0.25);
+      padding: 6px 10px;
     }
 
-    .links a.btn:hover {
-      box-shadow: 0 6px 16px rgba(0, 255, 153, 0.35);
-      transform: translateY(-2px);
+    /* Hero: ajustar grid a columna única en móvil */
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 60px 16px 16px;
+    }
+
+    /* Secciones con row (estrategia, contacto): una sola columna */
+    .row {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Modal: asegurar scroll interno en móvil */
+    .modal-content {
+      max-height: 95vh;
+      overflow-y: auto;
+      margin: 16px;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    /* Evitar que el modal se salga del viewport */
+    .modal {
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+
+    /* Ajustar tamaño de texto en cards para móviles */
+    .card h3 {
+      font-size: 1.2rem;
+    }
+    .card-body {
+      padding: 16px;
+    }
+
+    /* Botones en móviles: que no se salgan */
+    .cta {
+      justify-content: center;
+    }
+    .btn-primary, .btn-ghost {
+      font-size: 0.95rem;
+      padding: 10px 16px;
+    }
+
+    /* Sección de precios: que no se desborde */
+    .price {
+      padding: 20px;
+    }
+    .price h3 {
+      font-size: 1.4rem;
     }
   }
 
-  /* Animaciones suaves */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(-12px);
+  /* iOS: mejorar renderizado de scroll y sombras */
+  @supports (-webkit-touch-callout: none) {
+    .modal-content {
+      -webkit-overflow-scrolling: touch;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .card, .modal-content, .price {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
   }
 
-  /* Para pantallas muy pequeñas */
-  @media (max-width: 480px) {
-    .brand {
-      font-size: 1.15rem;
-    }
-    .links a {
-      font-size: 0.8rem;
-      padding: 5px 9px;
-    }
-    .links a.btn {
-      font-size: 0.85rem;
-      padding: 7px 12px;
-    }
+  /* Evitar zoom al hacer foco en inputs */
+  input, textarea {
+    font-size: 16px;
   }
 </style>
 
