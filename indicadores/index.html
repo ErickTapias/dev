@@ -661,41 +661,45 @@
   /* --- AJUSTES MÓVIL: Menú y Modal --- */
 
 <style>
-  /* --- MEJORA DINÁMICA DEL MENÚ PARA MÓVILES --- */
+  /* --- MEJORA TOTAL DEL MENÚ EN MÓVILES: Encabezado arriba, botones abajo con animación --- */
   @media (max-width: 768px) {
-    /* Estructura en dos filas */
+    /* Cambiar a diseño vertical */
     .nav-inner {
       flex-direction: column;
-      gap: 8px;
-      padding: 12px 16px;
-      width: 100%;
-      position: relative;
+      align-items: stretch;
+      gap: 0;
+      padding: 14px 16px;
+      text-align: center;
     }
 
-    /* Fila 1: Logo (encabezado arriba) */
+    /* Encabezado arriba (logo y nombre) */
     .brand {
-      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 1.3rem;
       font-weight: 800;
-      align-self: flex-start;
-      padding: 4px 0;
-      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      animation: fadeInUp 0.6s ease-out;
     }
     .brand .dot {
       width: 12px;
       height: 12px;
-      box-shadow: 0 0 12px var(--primary);
+      background: var(--primary);
+      box-shadow: 0 0 16px var(--primary);
+      margin-right: 8px;
     }
 
-    /* Fila 2: Botones (abajo) */
+    /* Botonera abajo */
     .links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 4px;
-      padding: 8px 0;
+      padding: 10px 0;
       border-top: 1px solid var(--stroke);
-      width: 100%;
+      animation: fadeInUp 0.6s ease-out 0.2s both;
     }
 
     .links a {
@@ -703,43 +707,46 @@
       padding: 6px 10px;
       border-radius: 8px;
       opacity: 0.9;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .links a:hover {
       opacity: 1;
-      background: rgba(0, 255, 153, 0.1);
+      background: rgba(0, 255, 153, 0.15);
+      transform: translateY(-1px);
     }
 
     .links a.btn {
       background: var(--primary);
       color: #0f2027;
       font-weight: 700;
-      padding: 8px 14px;
+      padding: 8px 16px;
       font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(0, 255, 153, 0.25);
     }
 
-    /* Animación suave al cargar */
-    .nav {
-      animation: slideDown 0.4s ease-out;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .links a.btn:hover {
+      box-shadow: 0 6px 16px rgba(0, 255, 153, 0.35);
+      transform: translateY(-2px);
     }
   }
 
-  /* Refuerzo para pantallas pequeñas */
+  /* Animaciones suaves */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Para pantallas muy pequeñas */
   @media (max-width: 480px) {
     .brand {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
     .links a {
       font-size: 0.8rem;
