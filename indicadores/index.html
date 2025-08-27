@@ -661,56 +661,93 @@
   /* --- AJUSTES MÓVIL: Menú y Modal --- */
 
 <style>
+  /* --- MEJORA DINÁMICA DEL MENÚ PARA MÓVILES --- */
   @media (max-width: 768px) {
-    /* Ajustar contenedor del menú */
+    /* Estructura en dos filas */
     .nav-inner {
-      flex-wrap: wrap;
-      padding: 12px 12px;
+      flex-direction: column;
       gap: 8px;
-    }
-
-    /* Hacer que los enlaces sean más fáciles de tocar */
-    .links {
+      padding: 12px 16px;
       width: 100%;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      position: relative;
     }
 
-    .links a {
-      font-size: 0.95rem;
-      padding: 8px 12px;
-      border-radius: 8px;
-    }
-
-    /* Destacar el botón de Contacto */
-    .links a.btn {
-      font-size: 0.9rem;
-      padding: 10px 16px;
-      background: var(--primary);
-    }
-
-    /* Asegurar que el logo no se corte */
+    /* Fila 1: Logo (encabezado arriba) */
     .brand {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      font-weight: 800;
+      align-self: flex-start;
+      padding: 4px 0;
+      transition: all 0.3s ease;
     }
     .brand .dot {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
+      box-shadow: 0 0 12px var(--primary);
     }
-  }
 
-  /* Para pantallas muy pequeñas (ej. iPhone SE) */
-  @media (max-width: 480px) {
+    /* Fila 2: Botones (abajo) */
     .links {
-      gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 4px;
+      padding: 8px 0;
+      border-top: 1px solid var(--stroke);
+      width: 100%;
     }
+
     .links a {
       font-size: 0.85rem;
       padding: 6px 10px;
+      border-radius: 8px;
+      opacity: 0.9;
+      transition: all 0.3s ease;
     }
-    .nav-inner {
-      padding: 10px 10px;
+
+    .links a:hover {
+      opacity: 1;
+      background: rgba(0, 255, 153, 0.1);
+    }
+
+    .links a.btn {
+      background: var(--primary);
+      color: #0f2027;
+      font-weight: 700;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+
+    /* Animación suave al cargar */
+    .nav {
+      animation: slideDown 0.4s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  /* Refuerzo para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .brand {
+      font-size: 1.1rem;
+    }
+    .links a {
+      font-size: 0.8rem;
+      padding: 5px 9px;
+    }
+    .links a.btn {
+      font-size: 0.85rem;
+      padding: 7px 12px;
     }
   }
 </style>
