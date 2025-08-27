@@ -660,90 +660,58 @@
   <style>
   /* --- AJUSTES MÓVIL: Menú y Modal --- */
 
-  /* Asegurar que el viewport sea correcto (ya lo tienes, pero lo refuerzo) */
+<style>
   @media (max-width: 768px) {
-    /* Navbar: mantener el menú legible y no cortado */
+    /* Ajustar contenedor del menú */
     .nav-inner {
-      padding: 12px 12px;
       flex-wrap: wrap;
+      padding: 12px 12px;
       gap: 8px;
     }
+
+    /* Hacer que los enlaces sean más fáciles de tocar */
     .links {
       width: 100%;
       justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 0.95rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    /* Destacar el botón de Contacto */
+    .links a.btn {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+      background: var(--primary);
+    }
+
+    /* Asegurar que el logo no se corte */
+    .brand {
+      font-size: 1.1rem;
+    }
+    .brand .dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  /* Para pantallas muy pequeñas (ej. iPhone SE) */
+  @media (max-width: 480px) {
+    .links {
+      gap: 8px;
     }
     .links a {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       padding: 6px 10px;
     }
-
-    /* Hero: ajustar grid a columna única en móvil */
-    .hero {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 60px 16px 16px;
+    .nav-inner {
+      padding: 10px 10px;
     }
-
-    /* Secciones con row (estrategia, contacto): una sola columna */
-    .row {
-      grid-template-columns: 1fr !important;
-    }
-
-    /* Modal: asegurar scroll interno en móvil */
-    .modal-content {
-      max-height: 95vh;
-      overflow-y: auto;
-      margin: 16px;
-      border-radius: 16px;
-      padding: 24px;
-    }
-
-    /* Evitar que el modal se salga del viewport */
-    .modal {
-      align-items: flex-start;
-      padding-top: 20px;
-    }
-
-    /* Ajustar tamaño de texto en cards para móviles */
-    .card h3 {
-      font-size: 1.2rem;
-    }
-    .card-body {
-      padding: 16px;
-    }
-
-    /* Botones en móviles: que no se salgan */
-    .cta {
-      justify-content: center;
-    }
-    .btn-primary, .btn-ghost {
-      font-size: 0.95rem;
-      padding: 10px 16px;
-    }
-
-    /* Sección de precios: que no se desborde */
-    .price {
-      padding: 20px;
-    }
-    .price h3 {
-      font-size: 1.4rem;
-    }
-  }
-
-  /* iOS: mejorar renderizado de scroll y sombras */
-  @supports (-webkit-touch-callout: none) {
-    .modal-content {
-      -webkit-overflow-scrolling: touch;
-    }
-    .card, .modal-content, .price {
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-  }
-
-  /* Evitar zoom al hacer foco en inputs */
-  input, textarea {
-    font-size: 16px;
   }
 </style>
 
