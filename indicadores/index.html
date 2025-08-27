@@ -660,6 +660,26 @@
   <style>
   /* --- AJUSTES MÓVIL: Menú y Modal --- */
 
+      <script>
+  // Menú hamburguesa
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Cerrar menú al hacer click en un enlace
+  document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.style.display = 'none';
+      menuToggle.classList.remove('open');
+    });
+  });
+</script>
+
+
 <style>
   /* --- MEJORA TOTAL DEL MENÚ EN MÓVILES: Encabezado arriba, botones abajo con animación --- */
   @media (max-width: 768px) {
@@ -759,24 +779,6 @@
   }
 </style>
 
-  <script>
-  // Menú hamburguesa
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Cerrar menú al hacer click en un enlace
-  document.querySelectorAll('#navLinks a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.style.display = 'none';
-      menuToggle.classList.remove('open');
-    });
-  });
-</script>
 
 </body>
 </html>
