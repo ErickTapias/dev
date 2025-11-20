@@ -174,20 +174,39 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* LOGOS ARRIBA DERECHA */
-    .logos-container{position:fixed;top:12px;right:18px;z-index:1010;display:flex;gap:10px;align-items:center}
-    .logo-img{height:26px;width:auto;opacity:0.85;transition:opacity 0.2s}
-    .logo-img:hover{opacity:1}
-    @media(max-width:600px){.logos-container{top:8px;right:8px;gap:6px}.logo-img{height:15px}}
+    /* LOGOS SECTION GRANDES */
+    .logos-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+    .logo-grande {
+      height: 100px;
+      width: auto;
+      opacity: 0.92;
+      filter: grayscale(8%) contrast(106%);
+      transition: opacity 0.25s, filter 0.25s;
+    }
+    .logo-grande:hover {
+      opacity: 1;
+      filter: none;
+    }
+    @media(max-width: 768px) {
+      .logos-section {
+        gap: 30px;
+        padding: 40px 16px;
+      }
+      .logo-grande {
+        height: 65px;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- LOGOS PEQUEÑOS ARRIBA DERECHA -->
-  <div class="logos-container">
-    <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="logo-img"/>
-    <img src="imagen/Kinetick_Logo.png" alt="Kinetick" class="logo-img"/>
-  </div>
 
   <!-- NAVBAR -->
   <nav class="nav" aria-label="Navegación principal">
@@ -207,6 +226,12 @@
       </div>
     </div>
   </nav>
+
+  <!-- LOGOS GRANDES ANTES DEL HERO -->
+  <div class="logos-section">
+    <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-grande"/>
+    <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="logo-grande"/>
+  </div>
 
   <!-- HERO -->
   <header id="inicio" class="hero">
