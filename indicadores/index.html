@@ -178,26 +178,38 @@
     .logos-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 16px;
+      padding: 60px 16px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
     }
     .logos-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 32px;
     }
-    .logo-grande {
+    .logo-ninja {
       height: 50px;
       width: auto;
       opacity: 0.92;
       filter: grayscale(8%) contrast(106%);
       transition: opacity 0.25s, filter 0.25s;
     }
-    .logo-grande:hover {
+    .logo-ninja:hover {
+      opacity: 1;
+      filter: none;
+    }
+    .logo-kinetick-large {
+      height: 100px;
+      width: auto;
+      opacity: 0.92;
+      filter: grayscale(8%) contrast(106%);
+      transition: opacity 0.25s, filter 0.25s;
+    }
+    .logo-kinetick-large:hover {
       opacity: 1;
       filter: none;
     }
@@ -267,10 +279,13 @@
     }
     @media(max-width: 768px) {
       .logos-container {
-        gap: 25px;
+        gap: 20px;
       }
-      .logo-grande {
+      .logo-ninja {
         height: 35px;
+      }
+      .logo-kinetick-large {
+        height: 70px;
       }
       .platform-logos {
         gap: 30px;
@@ -310,13 +325,18 @@
   </nav>
 
   <!-- LOGOS CON TEXTO AUTORIZADO AL INICIO -->
-    <div class="platform-logos fade-up">
-      <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="platform-logo"/>
+  <div class="logos-section">
+    <div class="logos-container fade-up">
+      <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-ninja"/>
       <a href="https://kinetick.com/NinjaTrader" target="_blank" rel="noopener">
-         </a>
+        <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="logo-kinetick-large"/>
+      </a>
     </div>
-    <div class="provider-text">
+    <div class="provider-text fade-up">
       Somos Proveedor Autorizado del Ecosistema NinjaTrader
+      <div class="risk-link-initial">
+        <a href="riesgos.html">Riesgos</a>
+      </div>
     </div>
   </div>
 
@@ -543,9 +563,9 @@
   <section class="platform-recommended-section">
     <h2 class="platform-title fade-up">Nuestra plataforma recomendada</h2>
     <div class="platform-logos fade-up">
-      <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="platform-logo"/>
+      <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="platform-logo"/>
       <a href="https://kinetick.com/NinjaTrader" target="_blank" rel="noopener">
-        <img src="imagen/Kinetick_Logo.png" alt="Kinetick" class="platform-logo"/>
+        <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="platform-logo"/>
       </a>
     </div>
     <div class="risk-disclaimer fade-up">
@@ -612,7 +632,7 @@
   <footer>
     © 2025 Smart Trading Systems — Todos los derechos reservados · 
     <a href="#inicio">Volver arriba</a> · 
-    <a href="https://www.cftc.gov/sites/default/files/idc/groups/public/@customerprotection/documents/file/customeradvisory_urvct121517.pdf" style="color:var(--primary);">Riesgos</a> · 
+    <a href="riesgos.html" style="color:var(--primary);">Riesgos</a> · 
     <a href="https://ericktapias.github.io/dev/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:700; text-decoration:none">Portafolio de Desarrollador</a>
   </footer>
 
