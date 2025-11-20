@@ -174,7 +174,7 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* LOGOS SECTION MEDIANOS */
+    /* LOGOS SECTION INICIAL */
     .logos-section {
       max-width: 1200px;
       margin: 0 auto;
@@ -208,16 +208,62 @@
       letter-spacing: 0.3px;
       font-weight: 500;
     }
-    .risk-link {
+    .risk-link-initial {
       color: var(--primary);
       font-size: 0.85rem;
       opacity: 0.8;
       transition: opacity 0.2s;
       margin-top: 8px;
     }
-    .risk-link:hover {
+    .risk-link-initial:hover {
       opacity: 1;
       text-decoration: underline;
+    }
+    /* LOGOS SECTION ANTES FAQ */
+    .platform-recommended-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .platform-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: center;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+    .platform-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    .platform-logo {
+      height: 60px;
+      width: auto;
+      opacity: 0.92;
+      filter: grayscale(8%) contrast(106%);
+      transition: opacity 0.25s, filter 0.25s;
+    }
+    .platform-logo:hover {
+      opacity: 1;
+      filter: none;
+    }
+    .risk-disclaimer {
+      max-width: 900px;
+      color: var(--ink-dim);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      text-align: justify;
+      opacity: 0.85;
+    }
+    .risk-disclaimer p {
+      margin: 12px 0;
     }
     @media(max-width: 768px) {
       .logos-container {
@@ -226,8 +272,18 @@
       .logo-grande {
         height: 35px;
       }
-      .provider-text {
-        font-size: 0.9rem;
+      .platform-logos {
+        gap: 30px;
+      }
+      .platform-logo {
+        height: 40px;
+      }
+      .platform-title {
+        font-size: 1.4rem;
+      }
+      .risk-disclaimer {
+        font-size: 0.85rem;
+        text-align: left;
       }
     }
   </style>
@@ -253,16 +309,16 @@
     </div>
   </nav>
 
-  <!-- LOGOS CON TEXTO AUTORIZADO -->
+  <!-- LOGOS CON TEXTO AUTORIZADO AL INICIO -->
   <div class="logos-section">
     <div class="logos-container">
-      <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="logo-grande"/>
-      <img src="imagen/Kinetick_Logo.png" alt="Kinetick" class="logo-grande"/>
+      <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-grande"/>
+      <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="logo-grande"/>
     </div>
     <div class="provider-text">
       Somos Proveedor Autorizado del Ecosistema NinjaTrader
-      <div class="risk-link">
-        <a href="https://www.cftc.gov/sites/default/files/idc/groups/public/@customerprotection/documents/file/customeradvisory_urvct121517.pdf">Riesgos</a>
+      <div class="risk-link-initial">
+        <a href="riesgos.html">Riesgos</a>
       </div>
     </div>
   </div>
@@ -486,6 +542,32 @@
     </div>
   </section>
 
+  <!-- PLATAFORMA RECOMENDADA - ANTES DE FAQ -->
+  <section class="platform-recommended-section">
+    <h2 class="platform-title fade-up">Nuestra plataforma recomendada</h2>
+    <div class="platform-logos fade-up">
+      <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="platform-logo"/>
+      <a href="https://kinetick.com/NinjaTrader" target="_blank" rel="noopener">
+        <img src="imagen/Kinetick_Logo.png" alt="Kinetick" class="platform-logo"/>
+      </a>
+    </div>
+    <div class="risk-disclaimer fade-up">
+      <p><strong>Aviso de Riesgo:</strong> Operar con futuros y divisas conlleva un riesgo sustancial y no es apto para todos los inversores. Un inversor podría perder la totalidad de su inversión inicial o incluso más.</p>
+      
+      <p>El capital de riesgo es aquel que se puede perder sin poner en peligro la seguridad financiera ni el estilo de vida. Solo se debe utilizar capital de riesgo para operar y solo quienes dispongan de suficiente capital de riesgo deberían considerar operar. El rendimiento pasado no garantiza resultados futuros.</p>
+
+      <p><strong>Aviso sobre Rendimiento Hipotético:</strong> Los resultados de rendimiento hipotético presentan numerosas limitaciones inherentes, algunas de las cuales se describen a continuación. No se garantiza que ninguna cuenta obtendrá ganancias o pérdidas similares a las mostradas; de hecho, con frecuencia existen grandes diferencias entre los resultados de rendimiento hipotético y los resultados reales obtenidos posteriormente por cualquier programa de negociación. Una de las limitaciones de los resultados de rendimiento hipotético es que generalmente se elaboran con la ventaja de conocer el resultado final.</p>
+
+      <p>Además, operar hipotéticamente no implica riesgo financiero, y ningún registro de operaciones hipotéticas puede reflejar completamente el impacto del riesgo financiero de operar realmente. Por ejemplo, la capacidad de soportar pérdidas o de seguir un programa de trading específico a pesar de las pérdidas son aspectos importantes que pueden afectar negativamente los resultados reales de las operaciones.</p>
+
+      <p>Existen numerosos factores adicionales relacionados con los mercados en general o con la implementación de cualquier programa de trading específico que no se pueden tener en cuenta por completo al preparar resultados de rendimiento hipotético y que pueden afectar negativamente los resultados de las operaciones.</p>
+
+      <p><strong>Aviso sobre la Sala de Trading en Vivo:</strong> Esta presentación tiene fines educativos únicamente y las opiniones expresadas son solo del presentador. Todas las operaciones presentadas deben considerarse hipotéticas y no se debe esperar que se repliquen en una cuenta de trading real.</p>
+
+      <p><strong>Aviso sobre Testimonios:</strong> Los testimonios que aparecen en este sitio web pueden no ser representativos de otros clientes y no garantizan el rendimiento ni el éxito futuros.</p>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq" class="section">
     <h2 class="center fade-up">Preguntas Frecuentes</h2>
@@ -522,7 +604,7 @@
           <button class="btn-primary" type="submit">Enviar mensaje</button>
         </form>
         <p class="muted" style="margin-top:8px">El formulario abrirá tu cliente de correo con el mensaje listo.</p>
-        <a href="https://wa.link/d8wtl4" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; text-decoration:none;">💬 WhatsApp</a>
+        <a href="https://wa.link/5a7m6s" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; text-decoration:none;">💬 WhatsApp</a>
       </div>
       <div>
         <img src="imagen/contactame1.png" alt="Soporte y acompañamiento" />
@@ -533,6 +615,7 @@
   <footer>
     © 2025 Smart Trading Systems — Todos los derechos reservados · 
     <a href="#inicio">Volver arriba</a> · 
+    <a href="riesgos.html" style="color:var(--primary);">Riesgos</a> · 
     <a href="https://ericktapias.github.io/dev/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:700; text-decoration:none">Portafolio de Desarrollador</a>
   </footer>
 
