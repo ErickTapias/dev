@@ -174,18 +174,24 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* LOGOS SECTION GRANDES */
+    /* LOGOS SECTION MEDIANOS */
     .logos-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 50px 16px;
+      padding: 40px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .logos-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 60px;
+      gap: 40px;
     }
     .logo-grande {
-      height: 100px;
+      height: 50px;
       width: auto;
       opacity: 0.92;
       filter: grayscale(8%) contrast(106%);
@@ -195,13 +201,33 @@
       opacity: 1;
       filter: none;
     }
+    .provider-text {
+      text-align: center;
+      color: var(--ink-dim);
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      font-weight: 500;
+    }
+    .risk-link {
+      color: var(--primary);
+      font-size: 0.85rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+      margin-top: 8px;
+    }
+    .risk-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
     @media(max-width: 768px) {
-      .logos-section {
-        gap: 30px;
-        padding: 40px 16px;
+      .logos-container {
+        gap: 25px;
       }
       .logo-grande {
-        height: 65px;
+        height: 35px;
+      }
+      .provider-text {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -227,10 +253,18 @@
     </div>
   </nav>
 
-  <!-- LOGOS GRANDES ANTES DEL HERO -->
+  <!-- LOGOS CON TEXTO AUTORIZADO -->
   <div class="logos-section">
-    <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="logo-grande"/>
-    <img src="imagen/Kinetick_Logo.png" alt="Kinetick" class="logo-grande"/>
+    <div class="logos-container">
+      <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-grande"/>
+      <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="logo-grande"/>
+    </div>
+    <div class="provider-text">
+      Somos Proveedor Autorizado del Ecosistema NinjaTrader
+      <div class="risk-link">
+        <a href="riesgos.html">Riesgos</a>
+      </div>
+    </div>
   </div>
 
   <!-- HERO -->
