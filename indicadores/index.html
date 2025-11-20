@@ -30,13 +30,13 @@
       background-attachment: fixed;
     }
     a{color:inherit;text-decoration:none}
-    /* Navbar y layout... [tu CSS original aquí] */
-    /* --- LOGOS CLIENTES ARRIBA DERECHA --- */
+
+    /* --- ESPACIO PARA DOS IMÁGENES ARRIBA DERECHA --- */
     .clientes-top {
       position: fixed;
-      top: 12px;
+      top: 13px;
       right: 22px;
-      z-index: 1010;
+      z-index: 1011;
       display: flex;
       gap: 12px;
       align-items: center;
@@ -44,11 +44,11 @@
       user-select: none;
     }
     .logo-cliente {
-      height: 28px;
+      height: 27px;
       width: auto;
-      opacity: 0.87;
-      filter: grayscale(5%) contrast(104%);
-      transition: opacity 0.17s, filter 0.17s;
+      opacity: 0.86;
+      filter: grayscale(8%) contrast(104%);
+      transition: opacity 0.18s, filter 0.18s;
       background: none;
       pointer-events: auto;
     }
@@ -66,12 +66,15 @@
         height: 16px;
       }
     }
-    /* ... resto de tu CSS intacto ... */
+    /* ... tu CSS original sigue igual ... */
+    /* Navbar, sección, hero, etc */
+    /* ... */
+
   </style>
 </head>
 <body>
 
-  <!-- LOGOS DE CLIENTES RECOMENDADOS ARRIBA DERECHA -->
+  <!-- ESPACIO PARA DOS IMÁGENES EN LA PARTE SUPERIOR DERECHA -->
   <div class="clientes-top">
     <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-cliente" />
     <img src="imagen/Kinetick_Logo.jpg" alt="Kinetick" class="logo-cliente" />
@@ -95,6 +98,8 @@
       </div>
     </div>
   </nav>
-  <!-- ... resto de tu código original sigue igual ... (Hero, Secciones, JS, etc.) -->
+
+  <!-- El resto de tu web funciona igual, no toques ninguna sección ni script adicional -->
+
 </body>
 </html>
