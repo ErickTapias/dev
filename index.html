@@ -1,6 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilo.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smart Trading Systems</title>
@@ -174,48 +184,30 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .clientes-top {
-  position: fixed;
-  top: 12px;
-  right: 22px;
-  z-index: 1010;
-  display: flex;
-  gap: 11px;
-  align-items: center;
-  pointer-events: none;
-  user-select: none;
-}
-
-.logo-cliente {
-  height: 27px;
-  width: auto;
-  opacity: 0.87;
-  filter: grayscale(4%) contrast(104%);
-  transition: opacity 0.17s, filter 0.17s;
-  background: none;
-  pointer-events: auto;
-}
-
-.logo-cliente:hover {
-  opacity: 1;
-  filter: none;
-}
-
-/* Responsive: logos más pequeños en móvil */
-@media (max-width: 600px) {
-  .clientes-top {
-    top: 7px;
-    right: 7px;
-    gap: 6px;
-  }
-  .logo-cliente {
-    height: 15px;
-  }
-}
-
   </style>
 </head>
+
 <body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Erick Tapias</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" >INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
 <!-- LOGOS DE CLIENTES RECOMENDADOS: NinjaTrader y Kinetick arriba a la derecha -->
 <div class="clientes-top">
   <img src="imagen/NinjaTrader_Wordmark_color_RGB.jpg" alt="NinjaTrader" class="logo-cliente" />
@@ -238,6 +230,21 @@
         <a href="#contacto" class="btn">Contacto</a>
       </div>
     </div>
+    
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Hero6.png" alt="">
+            </div>
+            <h1>Erick Tapias</h1>
+            <h2>Developer</h2>
+            <div class="redes">
+                <a href="https://www.instagram.com/tapiaserick/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/erick-tapias/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ErickTapias"><i class="fa-brands fa-git"></i></a>
+                <a href="https://join.skype.com/invite/u1eThuQhnhcO"><i class="fa-brands fa-skype"></i></a>
+            </div>
   </nav>
 
   <!-- HERO -->
@@ -335,6 +342,84 @@
           <p class="muted">Clasificación instantánea por estructura y contexto; agiliza la lectura y estandariza criterios.</p>
           <a class="btn-primary" href="caracteristicas-tipos.html">Características</a>
         </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Erick Tapias.</span> Desarrollador apasionado con un año de 
+                experiencia en proyectos varios como freelancer, experto en crear experiencias 
+                digitales cautivadoras. Combino +10 años de diseño gráfico con habilidades técnicas 
+                en lenguajes como HTML5, CSS3, JavaScript,C# y JAVA. Mi enfoque meticuloso y mi 
+                excelente comunicación garantizan productos digitales de alta calidad que atraen e 
+                involucran a los usuarios.
+                Desarrollo software práctico, atractivo y receptivo. Tengo experiencia en la creación 
+                de aplicaciones innovadoras para las industrias del deporte, el marketing y la publicidad. 
+                Un ejemplo destacado es una aplicación que automatizó tareas para la atención al 
+                cliente en empresas de productos varios y víveres, lo que resultó en un aumento del 
+                30% en las ventas y la interacción en redes sociales. Además, soy un experto en la 
+                resolución de problemas complejos y en la búsqueda de soluciones creativas que 
+                satisfagan las necesidades del cliente.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Teléfono</strong>
+                            <a href="https://w.app/FtH">+58 424 7682337<i class="fa-brands"></i></a>
+                          
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <a href="mailto://ericktapias@gmail.com">ericktapias@gmail.com<i class="fa-brands"></i></a>
+                            
+                        </li>
+                        <li>
+                            <strong>Web</strong>
+                            <a href="https://ericktapias.github.io/dev/">www.ericktapias.github.io/dev/<i class="fa-brands"></i></a>
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Venezuela
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-windows"></i>
+                            <span>WIN</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button >
+                <a href="https://drive.google.com/file/d/1x4rzhkH_erN6qjrr-w3DEe8NWp9ymZsJ/view?usp=drive_link">Descargar CV<i class="fa-solid fa-download"></i></a>
+                                  <span class="overlay" ></span>
+            </button>
       </article>
 
       <!-- Manipulaciones -->
@@ -355,6 +440,86 @@
           <p class="muted">Ajuste automático del riesgo definido, evitando errores y garantizando que no arriesgues más de lo permitido. Capital protegido, consistencia elevada.</p>
           <a class="btn-primary" href="caracteristicas-riesgo.html">Características</a>
         </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Habilidades</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Habilidades Técnicas</h3>
+                    <div class="skill">
+                        <span>JAVA</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Illustrator / Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Habilidades Profesionales</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>78%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
       </article>
 
       <!-- ATM -->
@@ -491,6 +656,99 @@
           <img src="imagen/osmel1.png" alt="Foto de Osmel García" class="avatar">
           <strong> Osmel García</strong>
         </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+
+                    <div class="item izq">
+                        <h4>Developer Front-end</h4>
+                        <span class="casa">Fundación Carlos Slim</span>
+                        <span class="fecha">2023 - 2023</span>
+                        <p>El Developer Front-end utiliza las tecnologías de la información y comunicación para
+                            plasmar el contenido de manera que los usuarios lo puedan aprovechar al máximo. Puede
+                            convertir cualquier sitio web en un fenómeno mundial. Técnologias aprendidas HTML, CSS3,
+                            JavaScript, React, Node JS, VUE JS.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Harvard University</h4>
+                        <span class="casa">CS50's Introduction to Computer Science</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>-Una comprensión amplia y sólida de la informática y la programación.
+                            -Cómo pensar algorítmicamente y resolver problemas de programación de manera eficiente.
+                            -Conceptos como abstracción, algoritmos, estructuras de datos, encapsulación, gestión de
+                            recursos, seguridad, ingeniería de software y desarrollo web.
+                            -Familiaridad con varios lenguajes, incluidos C, C#, Python, SQL y JavaScript, además de CSS y
+                            HTML.
+                            -Cómo desarrollar y presentar un proyecto final de programación.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>                    
+                    <div class="item izq">
+                        <h4>Diseño Gráfico</h4>
+                        <span class="casa">Universidad de Los Andes</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Estudios avanzados de Diseñador Gráfico durante 3 años</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">FREELANCE</span>
+                        <span class="fecha">2024</span>
+                        <p>
+• Developer JAVA / Spring
+• Building Frontend of Websites and Web Apps using JavaScript, HTML, CSS, React, etc.
+• Building UI Components using React.
+• Working with Clients and building User Interfaces as per their needs.
+• Development of HUD data tools for different poker rooms.
+• Development of exclusive professional INDICATOR tools for the NINJATRADER 8 platform.
+                        
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="item der">
+                        <h4>Desarrollador Web</h4>
+                        <span class="casa">Icoo Studio & Art</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>Creamos experiencias digitales atractivas y fáciles de usar que impulsan el crecimiento empresarial. Diseño web personalizado, sitios web y aplicaciones.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item der">
+                        <h4>Software creation, Assistant, Videos Analysis Professional Soccer</h4>
+                        <span class="casa">Estudiantes FC - 1era, El Vigía FC - 2da, Selec Nac SUB-15, Selec Nac SUB-20 FUTSAL, ULA FC - 2da</span>
+                        <span class="fecha">2013 - 2018</span>
+                        <p>Desarrollo de software para deportes de alta competencia, con material audiovisual para análisis de juego, seguimiento individual, y estadísticas. Papel clave en el desarrollo de jugadores y entrenadores. (Sofware de Video Analytics)</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         <p class="muted">“Estos indicadores han transformado la estrategia en algo aún más preciso y eficiente. Son herramientas espectaculares que usamos a diario y marcan la diferencia para profesionales y estudiantes.”</p>
         <p class="muted" style="margin-top:6px;"><em>Trader Profesional y Creador de la estrategia y de la Academia Sac Trader</em></p>
       </div>
@@ -507,6 +765,18 @@
         <div class="faq-a">
           <p class="muted">Estos indicadores están hechos para <strong>NinjaTrader 8</strong>, la mejor plataforma que existe.</p>
         </div>
+    </section>
+
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+  <div class="contenido-seccion">
+    <h2>PORTAFOLIO</h2>
+    <div class="galeria">
+      <div class="proyecto">
+        <img src="img/p1.jpg" alt="">
+        <div class="overlay">
+          <h3>Diseño Web Creativo</h3>
+          <p>www.ciencia+futbol.com</p>
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Recibo actualizaciones? <span>＋</span></div>
@@ -514,18 +784,36 @@
           <p class="muted">Sí. Todos los planes incluyen mejoras y optimizaciones continuas durante tu suscripción.</p>
         </div>
       </div>
+      <div class="proyecto">
+        <img src="img/p2.jpg" alt="">
+        <div class="overlay">
+          <h3>Diseño Web Creativo</h3>
+          <p>Fotografía</p>
       <div class="faq-item">
         <div class="faq-q">¿Puedo usar varios equipos? <span>＋</span></div>
         <div class="faq-a">
           <p class="muted">La licencia es por usuario. Escríbenos si necesitas equipos adicionales o plan de equipo.</p>
         </div>
       </div>
+      <div class="proyecto">
+        <img src="img/p3.jpg" alt="">
+        <div class="overlay">
+          <h3>Diseño Web Creativo</h3>
+          <p>www.icoostudioart.com</p>
       <div class="faq-item">
         <div class="faq-q">¿Ofrecen reembolso? <span>＋</span></div>
         <div class="faq-a">
           <p class="muted">Tenemos garantía de satisfacción en onboarding. Si no es para ti, lo resolvemos juntos.</p>
         </div>
       </div>
+      <!-- Nuevo proyecto agregado -->
+      <div class="proyecto">
+        <a href="indicadores/index.html" target="_blank">
+          <img src="img/tapa-web-indicadores.jpg" alt="Web de Indicadores para Trading">
+          <div class="overlay">
+            <h3>Indicadores para Trading</h3>
+            <p>Acceder al proyecto</p>
+          </div>
     </div>
   </section>
 
@@ -550,14 +838,72 @@
         <img src="imagen/contactame1.png" alt="Soporte y acompañamiento" />
       </div>
     </div>
+  </div>
+</section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.jpg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Venezuel 5101, Mérida
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: +58-4247682337
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: ericktapias@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
   </section>
 
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.instagram.com/tapiaserick/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/erick-tapias/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/ErickTapias"><i class="fa-brands fa-git"></i></a>
+            <a href="https://join.skype.com/invite/u1eThuQhnhcO"><i class="fa-brands fa-skype"></i></a>
+        </div>
+</footer>
+    <script src="script.js"></script>
+</body>
   <footer>
     © 2025 Smart Trading Systems — Todos los derechos reservados · 
     <a href="#inicio">Volver arriba</a> · 
     <a href="https://ericktapias.github.io/dev/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:700; text-decoration:none">Portafolio de Desarrollador</a>
   </footer>
 
+</html>
   <!-- JS: Animaciones on-scroll + FAQ + Contacto mailto -->
   <script>
     // IntersectionObserver para .fade-up
@@ -785,4 +1131,3 @@
 
 </body>
 </html>
-
