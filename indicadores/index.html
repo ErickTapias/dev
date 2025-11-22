@@ -32,7 +32,8 @@
     a{color:inherit;text-decoration:none}
     /* Navbar */
     .nav{
-      position:sticky; top:0; z-index:999;
+      position:sticky;
+      top:0; z-index:999;
       backdrop-filter: blur(8px);
       background:rgba(10,20,18,0.55);
       border-bottom:1px solid var(--stroke);
@@ -43,56 +44,265 @@
       padding:12px 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px;}
-    .brand .dot{width:10px;height:10px;background:var(--primary);border-radius:999px; box-shadow:0 0 16px var(--primary);}
+    .brand .dot{width:10px;height:10px;background:var(--primary);border-radius:999px;
+      box-shadow:0 0 16px var(--primary);}
     .nav a.btn{background:var(--primary);color:#0f2027;padding:10px 16px;border-radius:10px;font-weight:700}
-    .links{display:flex; gap:18px; align-items:center}
+    .links{display:flex; gap:18px;
+      align-items:center}
     .links a{opacity:.9}
-    .links a:hover{opacity:1; text-decoration:underline}
+    .links a:hover{opacity:1;
+      text-decoration:underline}
     /* Containers */
-    .section{max-width:1200px; margin:0 auto; padding:64px 16px}
+    .section{max-width:1200px; margin:0 auto;
+      padding:64px 16px}
     .center{text-align:center}
     /* Hero */
     .hero{
-      display:grid; grid-template-columns:1.1fr .9fr; gap:28px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr; gap:28px;
       align-items:center; padding:72px 16px 24px; max-width:1200px; margin:auto;
     }
-    .hero h1{font-size:clamp(32px,5vw,52px); line-height:1.1; margin:0}
+    .hero h1{font-size:clamp(32px,5vw,52px); line-height:1.1;
+      margin:0}
     .hero p{color:var(--ink-dim); font-size:1.05rem}
     .cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px}
-    .btn-primary{background:var(--primary); color:#0f2027; padding:12px 18px; border-radius:12px; font-weight:800; box-shadow:0 6px 22px rgba(0,255,153,.25); transition:transform .2s, box-shadow .2s}
-    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,255,153,.35)}
+    .btn-primary{background:var(--primary); color:#0f2027;
+      padding:12px 18px; border-radius:12px; font-weight:800; box-shadow:0 6px 22px rgba(0,255,153,.25); transition:transform .2s, box-shadow .2s}
+    .btn-primary:hover{transform:translateY(-2px);
+      box-shadow:0 10px 28px rgba(0,255,153,.35)}
     .btn-ghost{border:1px solid var(--stroke); padding:12px 18px; border-radius:12px}
-    .hero img{width:100%; border-radius:16px; box-shadow:0 10px 30px var(--shadow)}
+    .hero img{width:100%; border-radius:16px;
+      box-shadow:0 10px 30px var(--shadow)}
     /* Trust badges */
-    .badges{display:flex; gap:18px; flex-wrap:wrap; margin-top:18px}
-    .badge{border:1px solid var(--stroke); padding:8px 12px; border-radius:999px; font-size:.9rem; color:var(--muted)}
+    .badges{display:flex; gap:18px; flex-wrap:wrap;
+      margin-top:18px}
+    .badge{border:1px solid var(--stroke); padding:8px 12px; border-radius:999px; font-size:.9rem;
+      color:var(--muted)}
     /* Cards grid */
-    .grid{display:grid; gap:22px}
+    .grid{display:grid;
+      gap:22px}
     @media(min-width:820px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
     .card{
-      background:var(--card); border:1px solid var(--stroke); border-radius:16px; overflow:hidden;
+      background:var(--card);
+      border:1px solid var(--stroke); border-radius:16px; overflow:hidden;
       box-shadow:0 8px 28px var(--shadow); transition:transform .25s, box-shadow .25s, border-color .25s;
     }
-    .card:hover{transform:translateY(-6px); box-shadow:0 12px 36px rgba(0,255,153,.15); border-color:rgba(0,255,153,.3)}
-    .card img{width:100%; height:190px; object-fit:cover}
+    .card:hover{transform:translateY(-6px);
+      box-shadow:0 12px 36px rgba(0,255,153,.15); border-color:rgba(0,255,153,.3)}
+    .card img{width:100%; height:190px;
+      object-fit:cover}
     .card-body{padding:18px}
-    .card h3{margin:0 0 6px; color:var(--primary)}
+    .card h3{margin:0 0 6px;
+      color:var(--primary)}
     .muted{color:var(--ink-dim)}
-    .pill{display:inline-block; border:1px solid var(--stroke); padding:6px 10px; border-radius:999px; font-size:.85rem; color:var(--muted)}
+    .pill{display:inline-block; border:1px solid var(--stroke); padding:6px 10px; border-radius:999px; font-size:.85rem;
+      color:var(--muted)}
     /* Feature rows */
-    .row{display:grid; gap:24px; align-items:center}
+    .row{display:grid; gap:24px;
+      align-items:center}
     @media(min-width:900px){ .row{grid-template-columns:1.1fr .9fr} .row.flip{grid-template-columns:.9fr 1.1fr} }
-    .row img{width:100%; border-radius:16px; box-shadow:0 10px 28px var(--shadow)}
-    /* Pricing */
-    .price{
-      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border:1px solid var(--stroke); border-radius:18px; padding:22px;
+    .row img{width:100%; border-radius:16px;
+      box-shadow:0 10px 28px var(--shadow)}
+    
+    /* --- ESTILOS AGREGADOS DEL CODIGO 2 --- */
+    /* Benefits */
+    .benefits {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 32px;
     }
-    .price .tag{font-size:.85rem; color:#0f2027; background:var(--primary); display:inline-block; padding:6px 10px; border-radius:999px; font-weight:800}
-    .price h3{margin:10px 0 8px}
-    .price ul{list-style:none; padding:0; margin:14px 0; color:var(--ink-dim)}
-    .price li{margin:8px 0; display:flex; gap:8px; align-items:flex-start}
-    .price .cta-btn{display:block; text-align:center; margin-top:12px}
+    .benefit-card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 28px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0,255,153,.18);
+      border-color: rgba(0,255,153,.35);
+    }
+    .benefit-image {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 2px var(--primary));
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .benefit-text {
+      flex-grow: 1;
+    }
+    .benefit-text h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+    .benefit-text p {
+      margin: 0;
+      color: var(--ink-dim);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+    /* How it works */
+    .how-it-works {
+      margin-top: 56px;
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+    .step {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 28px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0,255,153,.15);
+      border-color: rgba(0,255,153,.3);
+    }
+    .step h4 {
+      color: var(--primary);
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .step p {
+      color: var(--ink-dim);
+      margin: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* PRECIOS (DEL CODIGO 2) */
+    .pricing-section { margin-top: 64px; }
+    .pricing-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 24px;
+    }
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 28px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      position: relative;
+    }
+    .price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(0,255,153,.15);
+      border-color: rgba(0,255,153,.4);
+    }
+    .price-tag {
+      font-size: .85rem;
+      color: #0f2027;
+      background: var(--primary);
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      text-align: center;
+      width: fit-content;
+      user-select: none;
+    }
+    .price-name {
+      margin: 0 0 12px;
+      font-size: 1.6rem;
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .price-desc {
+      color: var(--ink-dim);
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .price-list {
+      list-style: none;
+      margin: 16px 0;
+      padding: 0;
+      color: var(--ink-dim);
+      flex-grow: 1;
+    }
+    .price-list li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+    .price-list li::before {
+      content: "✅";
+      color: var(--primary);
+      font-weight: 700;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+    .price-list li.disabled::before {
+      content: "—";
+      color: var(--ink-dim);
+    }
+    .price-amount {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .price-btn {
+      background: var(--primary);
+      color: #0f2027;
+      padding: 14px 0;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      text-decoration: none;
+      transition: background-color .25s ease;
+    }
+    .price-btn:hover {
+      background: var(--primary-2);
+    }
+    .price-recommended {
+      border-color: rgba(0,255,153,.4);
+      box-shadow: 0 12px 36px rgba(0,255,153,.15);
+      z-index: 10;
+    }
+    .recommended-label {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #0f2027;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: .9rem;
+      padding: 6px 16px;
+      box-shadow: 0 4px 10px rgba(0,255,153,.3);
+      user-select: none;
+    }
+
     /* Testimonials */
     .testimonial {
       background: var(--card);
@@ -117,22 +327,29 @@
     }
     /* FAQ */
     .faq-item{border-bottom:1px solid var(--stroke)}
-    .faq-q{cursor:pointer; padding:14px 0; display:flex; justify-content:space-between; align-items:center; gap:10px}
-    .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease}
+    .faq-q{cursor:pointer;
+      padding:14px 0; display:flex; justify-content:space-between; align-items:center; gap:10px}
+    .faq-a{max-height:0; overflow:hidden;
+      transition:max-height .35s ease}
     .faq-item.open .faq-a{max-height:300px}
     /* Contact */
-    .contact form{display:grid; gap:12px}
+    .contact form{display:grid;
+      gap:12px}
     .input{
       background:rgba(255,255,255,0.05); border:1px solid var(--stroke); color:var(--ink);
       padding:12px 14px; border-radius:10px; outline:none;
     }
     .input:focus{border-color:rgba(0,255,153,.4); box-shadow:0 0 0 3px rgba(0,255,153,.15)}
-    textarea.input{min-height:120px; resize:vertical}
+    textarea.input{min-height:120px;
+      resize:vertical}
     /* Footer */
-    footer{border-top:1px solid var(--stroke); color:var(--muted); padding:28px 16px; text-align:center}
+    footer{border-top:1px solid var(--stroke); color:var(--muted); padding:28px 16px;
+      text-align:center}
     /* Animations */
-    .fade-up{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease}
-    .in-view{opacity:1 !important; transform:translateY(0) !important}
+    .fade-up{opacity:0; transform:translateY(24px);
+      transition:opacity .7s ease, transform .7s ease}
+    .in-view{opacity:1 !important;
+      transform:translateY(0) !important}
     /* Modal flotante */
     .modal {
       display: none;
@@ -171,8 +388,10 @@
       color: var(--primary);
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px);
+      }
+      to { opacity: 1; transform: translateY(0);
+      }
     }
     /* LOGOS SECTION INICIAL */
     .logos-section {
@@ -300,12 +519,54 @@
         font-size: 0.85rem;
         text-align: left;
       }
+      .benefits, .how-it-works {
+        grid-template-columns: 1fr !important;
+      }
+      .price-card .price-amount {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* NUEVOS ESTILOS PARA BOTONES DE INDICADORES */
+    .btn-badge-individual {
+      background: rgba(0, 204, 119, 0.2);
+      border: 1px solid var(--primary-2);
+      color: #e0f7fa;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-badge-individual:hover {
+      background: rgba(0, 204, 119, 0.35);
+      color: #fff;
+    }
+    
+    .btn-badge-system {
+      border: 1px solid var(--stroke);
+      color: var(--muted);
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      cursor: default;
+    }
+    
+    .actions-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="nav" aria-label="Navegación principal">
     <div class="nav-inner">
       <div class="brand">
@@ -324,7 +585,6 @@
     </div>
   </nav>
 
-  <!-- LOGOS CON TEXTO AUTORIZADO AL INICIO -->
   <div class="logos-section">
     <div class="logos-container fade-up">
       <img src="imagen/NinjaTrader_Wordmark_color_RGB.png" alt="NinjaTrader" class="logo-ninja"/>
@@ -337,7 +597,6 @@
     </div>
   </div>
 
-  <!-- HERO -->
   <header id="inicio" class="hero">
     <div class="fade-up">
       <h1>Automatiza los pasos de la mejor estrategia<br/>con herramientas profesionales</h1>
@@ -357,13 +616,13 @@
     </div>
   </header>
 
-  <!-- ESTRATEGIA -->
   <section id="estrategia" class="section">
     <div class="row fade-up">
       <div>
-        <h2>Estrategia Favorable, Ejecución Impecable</h2>
+        <h2>Mejor y Información, Ejecución Impecable</h2>
         <p class="muted">
-          Para nosotros, esta es la <strong>mejor estrategia que existe lo dice la estadistica</strong>. Nuestros indicadores automatizan pasos clave para
+          Las personas que tienen mejor la información son las personas que toman mejores decisiones, esta es la <strong>mejor estrategia que existe lo dice la estadistica</strong>.
+          Nuestros indicadores automatizan pasos claves para
           ejecutar con precisión, reducir errores y capturar oportunidades sin dudar.
         </p>
         <div class="badges">
@@ -382,7 +641,6 @@
     </div>
   </section>
 
-  <!-- Modal Estrategia -->
   <div id="estrategiaModal" class="modal">
     <div class="modal-content fade-up">
       <span class="modal-close">&times;</span>
@@ -396,7 +654,6 @@
     </div>
   </div>
 
-  <!-- INDICADORES -->
   <section id="indicadores" class="section">
     <h2 class="center fade-up">Indicadores Profesionales</h2>
     <p class="center muted fade-up">Un ecosistema diseñado para precisión, velocidad y confianza en cada trade.</p>
@@ -409,7 +666,10 @@
         <div class="card-body">
           <h3>Medidor de Velas</h3>
           <p class="muted">Analiza fuerza, rango y contexto de cada vela para anticipar continuidad o reversión con mayor claridad.</p>
-          <a class="btn-primary" href="caracteristicas-velas.html">Características</a>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-velas.html">Características</a>
+            <a class="btn-badge-individual" href="#contacto">Disponible Individualmente: $XX</a>
+          </div>
         </div>
       </article>
 
@@ -418,7 +678,10 @@
         <div class="card-body">
           <h3>Volúmenes Anormales</h3>
           <p class="muted">Detecta aumentos de volumen fuera de lo común que exponen acumulación, distribución y posibles quiebres.</p>
-          <a class="btn-primary" href="caracteristicas-volumen.html">Características</a>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-volumen.html">Características</a>
+            <a class="btn-badge-individual" href="#contacto">Disponible Individualmente: $XX</a>
+          </div>
         </div>
       </article>
 
@@ -426,8 +689,12 @@
         <img src="imagen/Tipos-de-Velas.png" alt="Tipos de Velas Automático"/>
         <div class="card-body">
           <h3>Tipos de Velas Automático</h3>
-          <p class="muted">Clasificación instantánea por estructura y contexto; agiliza la lectura y estandariza criterios.</p>
-          <a class="btn-primary" href="caracteristicas-tipos.html">Características</a>
+          <p class="muted">Clasificación instantánea por estructura y contexto;
+          agiliza la lectura y estandariza criterios.</p>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-tipos.html">Características</a>
+            <span class="btn-badge-system">Con el sistema Completo</span>
+          </div>
         </div>
       </article>
 
@@ -436,7 +703,10 @@
         <div class="card-body">
           <h3>Manipulaciones</h3>
           <p class="muted">Una joya ✨: ejecuta todos los pasos necesarios para detectar manipulaciones sin perder detalle.</p>
-          <a class="btn-primary" href="caracteristicas-manipulaciones.html">Características</a>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-manipulaciones.html">Características</a>
+            <span class="btn-badge-system">Con el sistema Completo</span>
+          </div>
         </div>
       </article>
 
@@ -444,8 +714,12 @@
         <img src="imagen/Gestor-de-Riesgo.png" alt="Gestor de Riesgo"/>
         <div class="card-body">
           <h3>Gestor de Riesgo</h3>
-          <p class="muted">Ajuste automático del riesgo definido, evitando errores y garantizando que no arriesgues más de lo permitido. Capital protegido, consistencia elevada.</p>
-          <a class="btn-primary" href="caracteristicas-riesgo.html">Características</a>
+          <p class="muted">Ajuste automático del riesgo definido, evitando errores y garantizando que no arriesgues más de lo permitido.
+          Capital protegido, consistencia elevada.</p>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-riesgo.html">Características</a>
+            <a class="btn-badge-individual" href="#contacto">Disponible Individualmente: $XX</a>
+          </div>
         </div>
       </article>
 
@@ -453,8 +727,12 @@
         <img src="imagen/ATM.png" alt="ATM - Gestión automática"/>
         <div class="card-body">
           <h3>ATM</h3>
-          <p class="muted">Automatiza la gestión completa: define <strong>SL</strong>, <strong>TP1</strong>, <strong>TP2</strong>, activa <strong>Break Even</strong> automático y deja que el sistema <strong>persiga el precio</strong> de forma inteligente. Mantén la disciplina y evita salidas emocionales.</p>
-          <a class="btn-primary" href="caracteristicas-atm.html">Características</a>
+          <p class="muted">Automatiza la gestión completa: define <strong>SL</strong>, <strong>TP1</strong>, <strong>TP2</strong>, activa <strong>Break Even</strong> automático y deja que el sistema <strong>persiga el precio</strong> 
+          de forma inteligente. Mantén la disciplina y evita salidas emocionales.</p>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-atm.html">Características</a>
+            <a class="btn-badge-individual" href="#contacto">Disponible Individualmente: $XX</a>
+          </div>
         </div>
       </article>
 
@@ -462,8 +740,12 @@
         <img src="imagen/Sop-y-Res-SL.png" alt="Resistencia y Soporte SL"/>
         <div class="card-body">
           <h3>Resistencia y Soporte SL</h3>
-          <p class="muted">Identifica automáticamente los dos últimos niveles clave de precio para marcar tu stop loss. Te ayuda a evaluar si estás dentro de tu riesgo permitido y tomar decisiones de entrada con mayor objetividad y control.</p>
-          <a class="btn-primary" href="caracteristicas-soporte-sl.html">Características</a>
+          <p class="muted">Identifica automáticamente los dos últimos niveles clave de precio para marcar 
+          tu stop loss. Te ayuda a evaluar si estás dentro de tu riesgo permitido y tomar decisiones de entrada con mayor objetividad y control.</p>
+          <div class="actions-row">
+            <a class="btn-primary" href="caracteristicas-soporte-sl.html">Características</a>
+            <a class="btn-badge-individual" href="#contacto">Disponible Individualmente: $XX</a>
+          </div>
         </div>
       </article>
 
@@ -471,7 +753,8 @@
         <img src="imagen/pexels-luis-gomes-166706-546819.jpg" alt="Indicador en desarrollo"/>
         <div class="card-body">
           <h3>Indicador de Estructuras y Tendencia</h3>
-          <p class="muted">Este indicador se encuentra actualmente en fase de desarrollo. Próximamente estará disponible con funciones avanzadas para mejorar tu operativa.</p>
+          <p class="muted">Este indicador se encuentra actualmente en fase de desarrollo.
+          Próximamente estará disponible con funciones avanzadas para mejorar tu operativa.</p>
           <a class="btn-ghost" href="#indicadores">Próximamente</a>
         </div>
       </article>
@@ -480,83 +763,177 @@
         <img src="imagen/pexels-luis-gomes-166706-546819.jpg" alt="Indicador en desarrollo"/>
         <div class="card-body">
           <h3>Niveles Importantes</h3>
-          <p class="muted">Este indicador se encuentra actualmente en fase de desarrollo. Próximamente estará disponible con funciones avanzadas para mejorar tu operativa.</p>
+          <p class="muted">Este indicador se encuentra actualmente en fase de desarrollo.
+          Próximamente estará disponible con funciones avanzadas para mejorar tu operativa.</p>
           <a class="btn-ghost" href="#indicadores">Próximamente</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- VIDEO -->
+  <section id="diario" class="section">
+    <div class="row flip fade-up">
+      <div>
+        <img src="imagen/DiarioTrading.png" alt="Diario de Trading Avanzado" />
+      </div>
+      <div>
+        <h2>Diario de Trading</h2>
+        <p class="muted">
+          Mucho más que un registro: es tu <strong>Centro de Comando</strong>.
+          Obtén el control ideal con gráficos y estadísticas personales automáticas, 
+          incluyendo formularios paso a paso para el Pre-Mercado y la ejecución, 
+          asegurando que cumplas tu plan sin errores.
+        </p>
+        <p class="muted">
+          Centraliza noticias, precios y capturas de pantalla de tus operaciones en un solo lugar.
+          Procesa la data para que tú solo te concentres en lo que importa: 
+          <strong>Tomar la decisión final para entrar en el mercado</strong>.
+        </p>
+        <div class="actions-row" style="margin-top: 20px;">
+            <a class="btn-badge-individual" href="#contacto" style="font-size:1rem; padding:14px 24px;">Disponible Individualmente: $XX</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="video" class="section center">
     <h2 class="fade-up">Demostración en Video</h2>
     <p class="muted fade-up">Una vista práctica de cómo trabajan juntos los indicadores en tiempo real.</p>
-    <p class="muted fade-up">Todos los indicadores funcionan correctamente y están plenamente operativos. Todo lo mostrado en esta plataforma está disponible y es utilizado diariamente por traders reales en sus estrategias de trading.</p>
+    <p class="muted fade-up">Todos los indicadores funcionan correctamente y están plenamente operativos.
+    Todo lo mostrado en esta plataforma está disponible y es utilizado diariamente por traders reales en sus estrategias de trading.</p>
 
     <div class="fade-up" style="margin-top:16px">
       <iframe width="100%" height="480" style="max-width:900px; border:none; border-radius:16px; box-shadow:0 10px 28px var(--shadow)" src="https://www.youtube.com/embed/ZiRo5gdtHR8?si=36gyV04uPFc2aOuU" title="Video de Smart Trading Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </section>
 
-  <!-- Modal flotante -->
-  <div id="featureModal" class="modal">
-    <div class="modal-content fade-up">
-      <span class="modal-close">&times;</span>
-      <h3 id="modalTitle">Título del Indicador</h3>
-      <p id="modalText">Aquí va una descripción más extensa de lo que hace este indicador. Explica cómo funciona, sus ventajas y en qué escenarios usarlo.</p>
-    </div>
-  </div>
-
-  <!-- PRICING -->
-  <section id="precios" class="section">
-    <h2 class="center fade-up">Planes y Licencias</h2>
-    <p class="center muted fade-up">Elige el plan que mejor se adapte a tu operativa. Todos incluyen actualizaciones.</p>
-
-    <div class="grid cols-3" style="margin-top:24px">
-      <div class="price fade-up">
-        <span class="tag">Starter</span>
-        <h3>Plan Inicial</h3>
-        <p class="muted">Lo esencial para comenzar con la estrategia.</p>
-        <ul>
-          <li>✅ Medidor de Velas</li>
-          <li>✅ Tipos de Velas Automático</li>
-          <li>— Soporte por email</li>
-        </ul>
-        <strong style="font-size:1.6rem">$0</strong> <span class="muted">/mes</span>
-        <a class="btn-primary cta-btn" href="#contacto">Empezar</a>
+  <section id="beneficios" class="section">
+    <h2 class="center fade-up">¿Por qué elegir este sistema?</h2>
+    <div class="benefits fade-up">
+      <div class="benefit-card">
+        <img src="imagen/analisis.png" alt="Análisis multi-temporal" class="benefit-image" />
+        <div class="benefit-text">
+          <h3>Análisis avanzado en múltiples niveles</h3>
+          <p>"El tiempo es dinero." Mientras tu ya puedas consumir la data procesada mejores decisiones vas a tomar. Analises mas rapido para q puedas tomar deciciones mas facil. Conoce el mercado en profundidad desde semanal hasta minutely para tomar decisiones acertadas.</p>
+        </div>
       </div>
-
-      <div class="price fade-up" style="border-color:rgba(0,255,153,.4); box-shadow:0 12px 36px rgba(0,255,153,.15)">
-        <span class="tag">Recomendado</span>
-        <h3>Plan Pro</h3>
-        <p class="muted">Pack completo para operar con disciplina y velocidad.</p>
-        <ul>
-          <li>✅ Volúmenes Anormales</li>
-          <li>✅ Manipulaciones</li>
-          <li>✅ Gestor de Riesgo</li>
-          <li>✅ Soporte prioritario</li>
-        </ul>
-        <strong style="font-size:1.6rem">$0</strong> <span class="muted">/mes</span>
-        <a class="btn-primary cta-btn" href="#contacto">Elegir Pro</a>
+      <div class="benefit-card">
+        <img src="imagen/controlcapital.png" alt="Gestión de riesgo" class="benefit-image" />
+        <div class="benefit-text">
+          <h3>Control y protección de tu capital</h3>
+          <p>La gestión disciplinada del riesgo es la base para una operativa sostenible y rentable.</p>
+        </div>
       </div>
-
-      <div class="price fade-up">
-        <span class="tag">Full</span>
-        <h3>Plan Elite</h3>
-        <p class="muted">Máximo control y automatización.</p>
-        <ul>
-          <li>✅ Todo lo del Pro</li>
-          <li>✅ ATM (SL/TP1/TP2/BE & seguimiento de precio)</li>
-          <li>✅ Resistencia y Soporte SL</li>
-          <li>✅ Sesión 1:1 Instalación paso a paso</li>
-        </ul>
-        <strong style="font-size:1.6rem">$0</strong> <span class="muted">/mes</span>
-        <a class="btn-primary cta-btn" href="#contacto">Ir por Elite</a>
+      <div class="benefit-card">
+        <img src="imagen/disiplina.png" alt="Disciplina operativa" class="benefit-image" />
+        <div class="benefit-text">
+          <h3>Disciplina y estrategia clara</h3>
+          <p>Solo una entrada diaria para evitar sobreoperar y mantener la consistencia en tus resultados.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <img src="imagen/acompanamiento.png" alt="Formación y mentoría" class="benefit-image" />
+        <div class="benefit-text">
+          <h3>Aprende y crece con acompañamiento</h3>
+          <p>Formación completa en vídeo y mentorías 1:1 para acelerar tu progreso y confianza.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PLATAFORMA RECOMENDADA - ANTES DE FAQ -->
+  <section id="como-funciona" class="section">
+    <h2 class="center fade-up">¿Cómo funciona?</h2>
+    <div class="how-it-works fade-up">
+      <div class="step">
+        <h4>Entiende el mercado</h4>
+        <p>Identifica la dirección y las zonas clave para operar con seguridad.</p>
+      </div>
+      <div class="step">
+        <h4>Prepara tu plan</h4>
+        <p>Construye una hoja de ruta con niveles de entrada, stop loss y objetivos claros.</p>
+      </div>
+      <div class="step">
+        <h4>Ejecuta con disciplina</h4>
+        <p>Aplicando reglas estrictas para maximizar ganancias y minimizar pérdidas.</p>
+      </div>
+      <div class="step">
+        <h4>Aprende y mejora</h4>
+        <p>Con formación continua y apoyo personalizado para crecer como trader.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="featureModal" class="modal">
+    <div class="modal-content fade-up">
+      <span class="modal-close">&times;</span>
+      <h3 id="modalTitle">Título del Indicador</h3>
+      <p id="modalText">Aquí va 
+      una descripción más extensa de lo que hace este indicador.
+      Explica cómo funciona, sus ventajas y en qué escenarios usarlo.</p>
+    </div>
+  </div>
+
+  <section id="precios" class="section pricing-section">
+    <h2 class="center fade-up">Planes y Opciones</h2>
+    <p class="center muted fade-up">Elige la opción que mejor se adapte 
+    a tus necesidades y nivel de compromiso.</p>
+
+    <div class="pricing-grid fade-up">
+      <div class="price-card">
+        <span class="price-tag">Opción 1</span>
+        <h3 class="price-name">Sistema Básico</h3>
+        <p class="price-desc">Acceso mensual las Herramientas basicas, automatización del patrón de manipulaciones, puntos claves y compatibilidad con cuentas reales y fondeo.</p>
+        <ul class="price-list">
+          <li>Acceso completo al sistema</li>
+          <li>📊 Medidas de Velas</li>
+          <li>📊 Tipos de Velas</li>
+          <li>📌 Indicador Manipulaciones para 5 y 1 min</li>
+          <li>💼 Compatible con cuentas reales y fondeo</li>
+        </ul>
+        <div class="price-amount">$xxx Mes</div>
+        <a href="#contacto" class="price-btn">Contratar Opción 1</a>
+      </div>
+      <div class="price-card price-recommended">
+        <div class="recommended-label">Recomendado</div>
+        <span class="price-tag">Opción 2</span>
+        <h3 class="price-name">Sistema Completo</h3>
+        <p class="price-desc">Incluye indicador de la opción Anual 
+        pero Vitalicio por un pago unico</p>
+        <ul class="price-list">
+          <li>Acceso completo al sistema</li>
+          <li>📊 Medidas de Velas</li>
+          <li>📊 Tipos de Velas</li>
+          <li>📌 Indicador Manipulaciones para 1, 5, 10 y 240 min</li>
+          <li>📌 Volumenes Anormales</li>
+          <li>📌 Gestor de Riesgo</li>
+          <li>📌 Resistencia y Soporte SL</li>
+          <li>📌 ATM (SL/TP1/TP2/BE & seguimiento de precio)</li>
+          <li>💼 Compatible con cuentas reales y fondeo</li>
+        </ul>
+        <div class="price-amount"><br/>$xxxx Vitalicio Único pago</div>
+        <a href="#contacto" class="price-btn">Contratar Opción 2</a>
+      </div>
+      <div class="price-card">
+        <span class="price-tag">Opción 3</span>
+        <h3 class="price-name">Sistema Completo</h3>
+        <p class="price-desc">Incluye indicadores de la opción mensual + Volumen Anormal el gestor de Riesgo y ATM configuración</p>
+        <ul class="price-list">
+          <li>Acceso completo al sistema</li>
+          <li>📊 Medidas de Velas</li>
+          <li>📊 Tipos de Velas</li>
+          <li>📌 Indicador Manipulaciones para 5min, 10 min, 240min</li>
+          <li>📌 Volumenes Anormales</li>
+          <li>📌 Gestor de Riesgo</li>
+          <li>📌 Resistencia y Soporte SL</li>
+          <li>📌 ATM (SL/TP1/TP2/BE & seguimiento de precio)</li>
+          <li>💼 Compatible con cuentas reales y fondeo</li>
+        </ul>
+        <div class="price-amount">$xxx Anual</div>
+        <a href="#contacto" class="price-btn">Contratar Opción 3</a>
+      </div>
+    </div>
+  </section>
+
   <section class="platform-recommended-section">
     <h2 class="platform-title fade-up">Nuestras plataformas recomendadas</h2>
     <div class="platform-logos fade-up">
@@ -566,49 +943,64 @@
       </a>
     </div>
     <div class="risk-disclaimer fade-up">
-      <p><strong>Aviso de Riesgo:</strong> Operar con futuros y divisas conlleva un riesgo sustancial y no es apto para todos los inversores. Un inversor podría perder la totalidad de su inversión inicial o incluso más.</p>
+      <p><strong>Aviso de Riesgo:</strong> Operar con futuros y divisas conlleva un riesgo sustancial y no es apto para todos los inversores.
+      Un inversor podría perder la totalidad de su inversión inicial o incluso más.</p>
       
-      <p>El capital de riesgo es aquel que se puede perder sin poner en peligro la seguridad financiera ni el estilo de vida. Solo se debe utilizar capital de riesgo para operar y solo quienes dispongan de suficiente capital de riesgo deberían considerar operar. El rendimiento pasado no garantiza resultados futuros.</p>
+      <p>El capital de riesgo es aquel que se puede perder sin poner en peligro la seguridad financiera ni el estilo de vida.
+      Solo se debe utilizar capital de riesgo para operar y solo quienes dispongan de suficiente capital de riesgo deberían considerar operar.
+      El rendimiento pasado no garantiza resultados futuros.</p>
 
-      <p><strong>Aviso sobre Rendimiento Hipotético:</strong> Los resultados de rendimiento hipotético presentan numerosas limitaciones inherentes, algunas de las cuales se describen a continuación. No se garantiza que ninguna cuenta obtendrá ganancias o pérdidas similares a las mostradas; de hecho, con frecuencia existen grandes diferencias entre los resultados de rendimiento hipotético y los resultados reales obtenidos posteriormente por cualquier programa de negociación. Una de las limitaciones de los resultados de rendimiento hipotético es que generalmente se elaboran con la ventaja de conocer el resultado final.</p>
+      <p><strong>Aviso sobre Rendimiento Hipotético:</strong> Los resultados de rendimiento hipotético presentan numerosas limitaciones inherentes, algunas de las cuales se describen a continuación.
+      No se garantiza que ninguna cuenta obtendrá ganancias o pérdidas similares a las mostradas;
+      de hecho, con frecuencia existen grandes diferencias entre los resultados de rendimiento hipotético y los resultados reales obtenidos posteriormente por cualquier programa de negociación.
+      Una de las limitaciones de los resultados de rendimiento hipotético es que generalmente se elaboran con la ventaja de conocer el resultado final.</p>
 
-      <p>Además, operar hipotéticamente no implica riesgo financiero, y ningún registro de operaciones hipotéticas puede reflejar completamente el impacto del riesgo financiero de operar realmente. Por ejemplo, la capacidad de soportar pérdidas o de seguir un programa de trading específico a pesar de las pérdidas son aspectos importantes que pueden afectar negativamente los resultados reales de las operaciones.</p>
+      <p>Además, operar hipotéticamente no implica riesgo financiero, y ningún registro de operaciones hipotéticas puede reflejar completamente el impacto del riesgo financiero de operar realmente.
+      Por ejemplo, la capacidad de soportar pérdidas o de seguir un programa de trading específico a pesar de las pérdidas son aspectos importantes que pueden afectar negativamente los resultados reales de las operaciones.</p>
 
       <p>Existen numerosos factores adicionales relacionados con los mercados en general o con la implementación de cualquier programa de trading específico que no se pueden tener en cuenta por completo al preparar resultados de rendimiento hipotético y que pueden afectar negativamente los resultados de las operaciones.</p>
 
-      <p><strong>Aviso sobre la Sala de Trading en Vivo:</strong> Esta presentación tiene fines educativos únicamente y las opiniones expresadas son solo del presentador. Todas las operaciones presentadas deben considerarse hipotéticas y no se debe esperar que se repliquen en una cuenta de trading real.</p>
+      <p><strong>Aviso sobre la Sala de Trading en Vivo:</strong> Esta presentación tiene fines 
+      educativos únicamente y las opiniones expresadas son solo del presentador.
+      Todas las operaciones presentadas deben considerarse hipotéticas y no se debe esperar que se repliquen en una cuenta de trading real.</p>
 
       <p><strong>Aviso sobre Testimonios:</strong> Los testimonios que aparecen en este sitio web pueden no ser representativos de otros clientes y no garantizan el rendimiento ni el éxito futuros.</p>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="section">
     <h2 class="center fade-up">Preguntas Frecuentes</h2>
     <div class="fade-up" style="max-width:900px; margin:18px auto 0">
       <div class="faq-item">
-        <div class="faq-q">¿Funcionan en mi plataforma? <span>＋</span></div>
+        <div class="faq-q">¿Funcionan en 
+        mi plataforma? <span>＋</span></div>
         <div class="faq-a"><p class="muted">Estos indicadores están hechos para <strong>NinjaTrader 8</strong>, la mejor plataforma que existe.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">¿Recibo actualizaciones? <span>＋</span></div>
-        <div class="faq-a"><p class="muted">Sí. Todos los planes incluyen mejoras y optimizaciones continuas durante tu suscripción.</p></div>
+        <div class="faq-q">¿Recibo actualizaciones?
+        <span>＋</span></div>
+        <div class="faq-a"><p class="muted">Sí.
+        Todos los planes incluyen mejoras y optimizaciones continuas durante tu suscripción.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">¿Puedo usar varios equipos? <span>＋</span></div>
-        <div class="faq-a"><p class="muted">La licencia es por usuario. Escríbenos si necesitas equipos adicionales o plan de equipo.</p></div>
+        <div class="faq-q">¿Puedo usar varios equipos?
+        <span>＋</span></div>
+        <div class="faq-a"><p class="muted">La licencia es por usuario.
+        Escríbenos si necesitas equipos adicionales o plan de equipo.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">¿Ofrecen reembolso? <span>＋</span></div>
-        <div class="faq-a"><p class="muted">Tenemos garantía de satisfacción en onboarding. Si no es para ti, lo resolvemos juntos.</p></div>
+        <div class="faq-q">¿Ofrecen reembolso?
+        <span>＋</span></div>
+        <div class="faq-a"><p class="muted">Tenemos garantía de satisfacción en onboarding.
+        Si no es para ti, lo resolvemos juntos.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
   <section id="contacto" class="section contact">
     <h2 class="center fade-up">Hablemos</h2>
-    <p class="center muted fade-up">¿Tienes dudas? Déjanos un mensaje y te respondemos.</p>
+    <p class="center muted fade-up">¿Tienes dudas?
+    Déjanos un mensaje y te respondemos.</p>
     <div class="row fade-up">
       <div>
         <form id="contactForm">
@@ -617,6 +1009,7 @@
           <textarea class="input" name="mensaje" placeholder="Escribe tu mensaje o pregunta" required></textarea>
           <button class="btn-primary" type="submit">Enviar mensaje</button>
         </form>
+   
         <p class="muted" style="margin-top:8px">El formulario abrirá tu cliente de correo con el mensaje listo.</p>
         <a href="https://wa.link/d8wtl4" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; text-decoration:none;">💬 WhatsApp</a>
       </div>
@@ -629,8 +1022,10 @@
   <footer>
     © 2025 Smart Trading Systems — Todos los derechos reservados · 
     <a href="#inicio">Volver arriba</a> · 
+  
     <a href="https://www.cftc.gov/sites/default/files/idc/groups/public/@customerprotection/documents/file/customeradvisory_urvct121517.pdf" style="color:var(--primary);">Riesgos</a> · 
-    <a href="https://ericktapias.github.io/dev/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:700; text-decoration:none">Portafolio de Desarrollador</a>
+    <a href="https://ericktapias.github.io/dev/" target="_blank" rel="noopener" style="color:var(--primary); font-weight:700;
+    text-decoration:none">Portafolio de Desarrollador</a>
   </footer>
 
   <script>
@@ -650,7 +1045,8 @@
     document.getElementById('contactForm').addEventListener('submit', (e)=>{
       e.preventDefault();
       const data=new FormData(e.target);
-      const nombre=encodeURIComponent(data.get('nombre'));
+      const 
+      nombre=encodeURIComponent(data.get('nombre'));
       const email=encodeURIComponent(data.get('email'));
       const mensaje=encodeURIComponent(data.get('mensaje'));
       const subject=`Consulta desde Smart Trading Systems - ${nombre}`;
@@ -662,7 +1058,6 @@
     const modalTitle = document.getElementById("modalTitle");
     const modalText = document.getElementById("modalText");
     const closeBtn = document.querySelector(".modal-close");
-
     const detalles = {
       "Medidor de Velas": "📏 Mide el tamaño de la vela.\n🧩 Complementa la lectura de volumen y estructura.\n🚀 Aumenta la confianza en las entradas y evita errores.\n🎯 Sirve para saber exactamente que tipo de vela es.",
       "Volúmenes Anormales": "📊 Detecta acumulación y distribución invisibles a simple vista.\n🚨 Señales tempranas de rompimientos con fuerza real.\n🔎 Filtra entradas en zonas con volumen significativo.\n🛡️ Evita falsas rupturas y trampas de mercado.",
@@ -672,7 +1067,6 @@
       "ATM": "🎯 Automatiza SL, TP1, TP2 y Break Even.\n🚀 Persigue el precio inteligentemente.\n🤖 Reduce la intervención manual.",
       "Resistencia y Soporte SL": "🎯 Identifica automáticamente los dos últimos niveles clave.\n🚀 Define zonas de entrada precisas.\n🤖 Señala el stop loss ideal para cada operación."
     };
-
     document.querySelectorAll(".card .btn-primary").forEach(btn => {
       btn.addEventListener("click", e => {
         e.preventDefault();
@@ -683,12 +1077,10 @@
         modal.style.display = "flex";
       });
     });
-
     closeBtn.addEventListener("click", () => modal.style.display = "none");
     window.addEventListener("click", e => {
       if (e.target === modal) modal.style.display = "none";
     });
-
     const estrategiaModal = document.getElementById("estrategiaModal");
     const closeBtns = document.querySelectorAll(".modal-close");
 
@@ -696,11 +1088,9 @@
       e.preventDefault();
       estrategiaModal.style.display = "flex";
     });
-
     closeBtns.forEach(btn => {
       btn.addEventListener("click", () => btn.closest(".modal").style.display = "none");
     });
-
     window.addEventListener("click", e => {
       if (e.target.classList.contains("modal")) {
         e.target.style.display = "none";
